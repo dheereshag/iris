@@ -1,0 +1,38 @@
+info:
+  name: New Request
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://gluvok.vercel.app/api/entries
+  body:
+    type: multipart-form
+    data:
+      - name: username
+        type: text
+        value: pi1
+      - name: password
+        type: text
+        value: hardware123
+      - name: center_id
+        type: text
+        value: "1"
+      - name: detected_vehicle_number
+        type: text
+        value: MH12AB1234
+      - name: weight
+        type: text
+        value: "14250.5"
+      - name: file
+        type: file
+        value:
+          - /Users/d/Downloads/1.jpg
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
